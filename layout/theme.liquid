@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FixHub Bern | Riparazione Smartphone, Console, Monopattini e PC</title>
+  <meta name="description" content="FixHub Bern — Riparazione professionale di smartphone, console, monopattini elettrici e PC a Berna. Preventivo gratuito. A partire da CHF 25." />
+  {{ content_for_header }}
+  {{ 'style.css' | asset_url | stylesheet_tag }}
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="logo">Fix<span>Hub</span> Bern</a>
+      <ul class="nav-links">
+        <li><a href="#servizi">Servizi</a></li>
+        <li><a href="#come-funziona">Come Funziona</a></li>
+        <li><a href="#prezzi">Prezzi</a></li>
+        <li><a href="#contatti" class="btn-nav">Contattaci</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#servizi" class="mobile-link">Servizi</a></li>
+      <li><a href="#come-funziona" class="mobile-link">Come Funziona</a></li>
+      <li><a href="#prezzi" class="mobile-link">Prezzi</a></li>
+      <li><a href="#contatti" class="mobile-link">Contattaci</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="badge">Berna · Svizzera</div>
+      <h1>Il tuo dispositivo rotto?<br /><span>Lo ripariamo noi.</span></h1>
+      <p class="hero-sub">Smartphone, console, monopattini elettrici e PC.<br />Preventivo gratuito · Riparazione rapida · Garanzia inclusa.</p>
+      <div class="hero-cta">
+        <a href="https://wa.me/41783021684" target="_blank" class="btn-primary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+        <a href="#servizi" class="btn-secondary">Scopri i servizi</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>CHF 25</strong><span>prezzo di partenza</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>Gratuita</strong><span>diagnostica</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>Garantita</strong><span>ogni riparazione</span></div>
+      </div>
+    </div>
+    <div class="hero-bg"></div>
+  </section>
+
+  <!-- SERVIZI -->
+  <section class="section" id="servizi">
+    <div class="container">
+      <div class="section-header">
+        <h2>I nostri servizi</h2>
+        <p>Ripariamo tutto quello che ha un chip o una batteria</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">📱</div>
+          <h3>Smartphone</h3>
+          <ul>
+            <li>Sostituzione schermo</li>
+            <li>Sostituzione batteria</li>
+            <li>Connettore di ricarica</li>
+            <li>Fotocamera rotta</li>
+          </ul>
+          <a href="#prezzi" class="card-link">Vedi prezzi →</a>
+        </div>
+        <div class="service-card featured">
+          <div class="badge-card">Più richiesto</div>
+          <div class="service-icon">🎮</div>
+          <h3>Console &amp; Controller</h3>
+          <ul>
+            <li>PS4 / PS5 / Xbox / Switch</li>
+            <li>Stick drift controller</li>
+            <li>Porta HDMI rotta</li>
+            <li>Ventola rumorosa</li>
+          </ul>
+          <a href="#prezzi" class="card-link">Vedi prezzi →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🛴</div>
+          <h3>Monopattini Elettrici</h3>
+          <ul>
+            <li>Xiaomi · Segway · Ninebot</li>
+            <li>Sostituzione batteria</li>
+            <li>Display e controller</li>
+            <li>Freni e ruote</li>
+          </ul>
+          <a href="#prezzi" class="card-link">Vedi prezzi →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💻</div>
+          <h3>PC &amp; Laptop</h3>
+          <ul>
+            <li>Windows e Mac</li>
+            <li>Sostituzione schermo</li>
+            <li>SSD, RAM, ventola</li>
+            <li>Recupero dati</li>
+          </ul>
+          <a href="#prezzi" class="card-link">Vedi prezzi →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COME FUNZIONA -->
+  <section class="section section-alt" id="come-funziona">
+    <div class="container">
+      <div class="section-header">
+        <h2>Come funziona</h2>
+        <p>Semplice e trasparente in 4 passi</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Contattaci</h3>
+          <p>Scrivici su WhatsApp o chiamaci. Descrivi il problema e ti rispondiamo subito.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Diagnostica gratuita</h3>
+          <p>Porti il dispositivo da noi. Lo analizziamo e ti diamo un preventivo senza impegno.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Riparazione</h3>
+          <p>Approvato il preventivo, ripariamo il tuo dispositivo con pezzi di qualità.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3>Ritiro</h3>
+          <p>Ritiri il dispositivo riparato con garanzia. Paghi solo a lavoro completato.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREZZI -->
+  <section class="section" id="prezzi">
+    <div class="container">
+      <div class="section-header">
+        <h2>Prezzi</h2>
+        <p>Trasparenti, competitivi, senza sorprese</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="price-card">
+          <div class="price-icon">📱</div>
+          <div class="price-info"><h4>Schermo Smartphone</h4><span class="price-label">iPhone, Samsung, Xiaomi…</span></div>
+          <div class="price-tag">da CHF 49</div>
+        </div>
+        <div class="price-card">
+          <div class="price-icon">🔋</div>
+          <div class="price-info"><h4>Batteria Smartphone</h4><span class="price-label">Tutti i modelli principali</span></div>
+          <div class="price-tag">da CHF 29</div>
+        </div>
+        <div class="price-card">
+          <div class="price-icon">🎮</div>
+          <div class="price-info"><h4>Riparazione Console</h4><span class="price-label">PS4, PS5, Xbox, Switch</span></div>
+          <div class="price-tag">da CHF 39</div>
+        </div>
+        <div class="price-card">
+          <div class="price-icon">🕹️</div>
+          <div class="price-info"><h4>Riparazione Controller</h4><span class="price-label">Stick drift, tasti, USB…</span></div>
+          <div class="price-tag">da CHF 25</div>
+        </div>
+        <div class="price-card">
+          <div class="price-icon">🛴</div>
+          <div class="price-info"><h4>Riparazione Monopattino</h4><span class="price-label">Xiaomi, Segway, Ninebot…</span></div>
+          <div class="price-tag">da CHF 35</div>
+        </div>
+        <div class="price-card">
+          <div class="price-icon">⚡</div>
+          <div class="price-info"><h4>Batteria Monopattino</h4><span class="price-label">Batterie certificate</span></div>
+          <div class="price-tag">da CHF 59</div>
+        </div>
+        <div class="price-card">
+          <div class="price-icon">💻</div>
+          <div class="price-info"><h4>Riparazione PC / Laptop</h4><span class="price-label">Windows e Mac</span></div>
+          <div class="price-tag">da CHF 49</div>
+        </div>
+        <div class="price-card">
+          <div class="price-icon">🖥️</div>
+          <div class="price-info"><h4>Schermo Laptop</h4><span class="price-label">Asus, Lenovo, HP, Dell…</span></div>
+          <div class="price-tag">da CHF 69</div>
+        </div>
+      </div>
+      <p class="pricing-note">* I prezzi sono orientativi. Il preventivo definitivo è gratuito e senza impegno.</p>
+    </div>
+  </section>
+
+  <!-- PERCHÉ NOI -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2>Perché scegliere FixHub Bern</h2>
+      </div>
+      <div class="features">
+        <div class="feature">
+          <div class="feature-icon">🔍</div>
+          <h3>Diagnostica gratuita</h3>
+          <p>Analizziamo il tuo dispositivo senza costi. Paghi solo se decidi di procedere.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">✅</div>
+          <h3>Garanzia su ogni lavoro</h3>
+          <p>Ogni riparazione include garanzia. Se non funziona, ci riprendiamo il problema.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">⚡</div>
+          <h3>Riparazione rapida</h3>
+          <p>Molte riparazioni completate in giornata. Non aspettare settimane.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">💎</div>
+          <h3>Pezzi di qualità</h3>
+          <p>Utilizziamo pezzi originali o ricondizionati certificati per ogni riparazione.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATTI -->
+  <section class="section contact-section" id="contatti">
+    <div class="container">
+      <div class="section-header">
+        <h2>Contattaci</h2>
+        <p>Siamo a Berna. Scrivici o chiamaci — rispondiamo subito.</p>
+      </div>
+      <div class="contact-wrapper">
+        <div class="contact-cards">
+          <a href="https://wa.me/41783021684" target="_blank" class="contact-card whatsapp">
+            <div class="contact-card-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </div>
+            <div><strong>WhatsApp</strong><span>+41 78 302 16 84</span></div>
+          </a>
+          <a href="tel:+41783021684" class="contact-card phone">
+            <div class="contact-card-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11 19.79 19.79 0 01.07 2.32 2 2 0 012 .14h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8a16 16 0 006.91 6.91l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div><strong>Telefono</strong><span>+41 78 302 16 84</span></div>
+          </a>
+          <div class="contact-card location">
+            <div class="contact-card-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div><strong>Dove siamo</strong><span>Berna, Svizzera</span></div>
+          </div>
+        </div>
+        <div class="cta-box">
+          <h3>Pronto a riparare il tuo dispositivo?</h3>
+          <p>Scrivici su WhatsApp con una foto del problema. Preventivo gratuito in pochi minuti.</p>
+          <a href="https://wa.me/41783021684?text=Ciao%20FixHub%20Bern!%20Vorrei%20un%20preventivo." target="_blank" class="btn-primary btn-large">Scrivi su WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">Fix<span>Hub</span> Bern</div>
+      <p>Riparazione professionale a Berna · Svizzera</p>
+      <p class="footer-copy">© 2026 FixHub Bern · Tutti i diritti riservati</p>
+    </div>
+  </footer>
+
+  {{ content_for_layout }}
+  {{ 'main.js' | asset_url | script_tag }}
+</body>
+</html>
