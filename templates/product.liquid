@@ -1,0 +1,91 @@
+<div class="product-page">
+  <div class="container">
+    <div class="product-layout">
+      <div class="product-gallery">
+        {% if product.featured_image %}
+          <img src="{{ product.featured_image | image_url: width: 800 }}" alt="{{ product.featured_image.alt | escape }}" class="product-main-img" />
+        {% else %}
+          <div class="product-no-img">📦</div>
+        {% endif %}
+        {% if product.images.size > 1 %}
+          <div class="product-thumbs">
+            {% for image in product.images %}
+              <img src="{{ image | image_url: width: 120 }}" alt="{{ image.alt | escape }}" class="product-thumb" />
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+      <div class="product-info">
+        <p class="product-type">{{ product.type }}</p>
+        <h1 class="product-title">{{ product.title }}</h1>
+        <div class="product-price">
+          {% if product.compare_at_price > product.price %}
+            <span class="price-old">CHF {{ product.compare_at_price | money_without_currency }}</span>
+          {% endif %}
+          <span class="price-current">CHF {{ product.price | money_without_currency }}</span>
+        </div>
+        <div class="product-description">{{ product.description }}</div>
+        {% form 'product', product, id: 'product-form' %}
+          {% if product.variants.size > 1 %}
+            <div class="variant-selector">
+              <label>Variante</label>
+              <select name="id" class="product-select">
+                {% for variant in product.variants %}
+                  <option value="{{ variant.id }}" {% unless variant.available %}disabled{% endunless %}>
+                    {{ variant.title }} — CHF {{ variant.price | money_without_currency }}
+                  </option>
+                {% endfor %}
+              </select>
+            </div>
+          {% else %}
+            <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+          {% endif %}
+          <div class="product-actions">
+            <button type="submit" name="add" class="btn-add-cart" {% unless product.available %}disabled{% endunless %}>
+              {% if product.available %}
+                🛒 Aggiungi al carrello
+              {% else %}
+                Esaurito
+              {% endif %}
+            </button>
+            <a href="https://wa.me/41783021684?text=Ciao!%20Sono%20interessato%20a%20{{ product.title | url_encode }}" target="_blank" class="btn-whatsapp">
+              💬 Chiedi su WhatsApp
+            </a>
+          </div>
+        {% endform %}
+        <div class="product-meta">
+          <p>✅ Testato e garantito da FixHub Bern</p>
+          <p>📦 Spedizione in Svizzera da CHF 8</p>
+          <p>🔄 Reso entro 14 giorni</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.product-page { padding: 100px 0 60px; }
+.product-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+.product-main-img { width: 100%; border-radius: 14px; object-fit: cover; }
+.product-no-img { font-size: 6rem; text-align: center; padding: 60px; background: #f8f9fa; border-radius: 14px; }
+.product-thumbs { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+.product-thumb { width: 72px; height: 72px; object-fit: cover; border-radius: 8px; cursor: pointer; border: 2px solid transparent; }
+.product-thumb:hover { border-color: #FF6B35; }
+.product-type { color: #FF6B35; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 8px; }
+.product-title { font-size: 2rem; font-weight: 800; color: #1B2A4A; margin-bottom: 16px; line-height: 1.2; }
+.product-price { margin-bottom: 20px; }
+.price-old { font-size: 1rem; color: #aaa; text-decoration: line-through; margin-right: 12px; }
+.price-current { font-size: 2rem; font-weight: 700; color: #FF6B35; }
+.product-description { color: #555; margin-bottom: 24px; line-height: 1.7; }
+.variant-selector { margin-bottom: 20px; }
+.variant-selector label { display: block; font-weight: 600; margin-bottom: 6px; color: #1B2A4A; }
+.product-select { width: 100%; padding: 12px; border: 2px solid #dee2e6; border-radius: 8px; font-size: 1rem; }
+.product-actions { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
+.btn-add-cart { background: #FF6B35; color: white; border: none; padding: 16px 32px; border-radius: 50px; font-size: 1.05rem; font-weight: 700; cursor: pointer; transition: background 0.2s; }
+.btn-add-cart:hover { background: #e55a24; }
+.btn-add-cart:disabled { background: #ccc; cursor: not-allowed; }
+.btn-whatsapp { background: #25D366; color: white; padding: 14px 32px; border-radius: 50px; font-size: 1rem; font-weight: 600; text-decoration: none; text-align: center; }
+.btn-whatsapp:hover { background: #1fba57; }
+.product-meta p { color: #666; font-size: 0.9rem; padding: 6px 0; border-bottom: 1px solid #f1f3f5; }
+@media (max-width: 768px) { .product-layout { grid-template-columns: 1fr; } .product-title { font-size: 1.5rem; } }
+</style>
